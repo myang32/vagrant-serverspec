@@ -1,11 +1,11 @@
-require_relative 'spec_helper'
+# require_relative 'spec_helper'
 
 #describe file('C:\\programdata\\chocolatey\\bin\\console.exe') do
 #  it { should be_file }
 #end
 
 describe windows_feature('Web-Server') do
-  it{ should be_installed.by("powershell") }
+  it{ should_not be_installed.by("powershell") }
 end
 
 #describe windows_registry_key(
@@ -28,9 +28,9 @@ describe port(80) do
 end
 
 describe file('C:\Windows\system32\telnet.exe') do
-  it { should be_file }
+  it { should_not be_file }
 end
 
 describe windows_feature('TelnetClient') do
-  it{ should be_installed.by("powershell") }
+  it{ should_not be_installed.by("powershell") }
 end

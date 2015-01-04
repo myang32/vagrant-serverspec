@@ -10,5 +10,5 @@ describe service('ufw') do
 end
 
 describe port(22) do
-  it { should be_listening }
+  it { should_not be_listening }
 end
